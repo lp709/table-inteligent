@@ -1,0 +1,137 @@
+@charset "UTF-8";
+/*
+:root {
+    --cor-fundo: #51d2e9;
+    --table-color: #ffffff;
+    --table-border: 1px solid black;
+    --table-collapse: separate;
+    --table-color: #000000;
+}
+
+
+
+body {
+    background-color: var(--table-color);
+}
+
+
+
+table {
+    border: var(--table-border);
+    border-collapse: var(--table-collapse);
+    width: 80%;
+    height: 400px;
+    margin-top: 50px;
+    margin: 150px auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #00000000;
+        color: white;
+    }
+
+    table {
+        border-color: white;
+    }
+}
+
+
+th {
+    height: 40px;
+    background-color: #02182b;
+    color: #eaebed;
+}
+
+td {
+    background-color: #780116;
+    color: #eaebed;
+}
+
+th,
+td {
+    padding: 10px;
+    border: var(--table-border);
+}
+
+.title,
+.status {
+    text-align: center;
+}*/
+
+@charset "UTF-8";
+
+:root {
+    --cor-fundo: #51d2e9;
+    --table-color: #ffffff;
+    --table-border: 1px solid black;
+    --table-collapse: separate;
+    /* Correto para o radius funcionar */
+}
+
+body {
+    /* Usei a variável de fundo que criaste */
+    background-color: var(--cor-fundo);
+    font-family: sans-serif;
+}
+
+table {
+    border: var(--table-border);
+    border-collapse: var(--table-collapse);
+    width: 80%;
+    height: 400px;
+    margin: 150px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    /* Corta o fundo das células para respeitar a curva */
+    border-spacing: 0;
+    /* Importante: remove o espaço entre as células */
+}
+
+/* Dark Mode - Ajuste na cor de fundo */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1a1a1a;
+        /* Um preto suave em vez de transparente */
+        color: white;
+    }
+
+    table {
+        border-color: white;
+    }
+}
+
+th {
+    height: 40px;
+    background-color: #02182b;
+    color: #eaebed;
+    border-bottom: var(--table-border);
+    /* Borda apenas em baixo */
+}
+
+td {
+    background-color: #ffffff;
+    /* Mudei para branco para parecer com o design */
+    color: #333;
+    /* Texto escuro para ler melhor no fundo branco */
+    border-bottom: 1px solid #ddd;
+    /* Borda leve entre linhas */
+}
+
+/* Remove a borda da última linha para não ficar "dupla" no fundo */
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #000000;
+}
+
+.title,
+.status {
+    text-align: center;
+}
