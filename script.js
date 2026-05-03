@@ -3,3 +3,4 @@ author = "Autor:" + " ";
 authorName = "Leandro" + " " + "Jesus";
 allName = author + authorName;
 console.log(allName);
+console.log("True");

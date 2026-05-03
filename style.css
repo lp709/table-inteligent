@@ -64,7 +64,7 @@ td {
 @charset "UTF-8";
 
 :root {
-    --cor-fundo: #51d2e9;
+    --cor-fundo: hsl(189, 78%, 62%);
     --table-color: #ffffff;
     --table-border: 1px solid black;
     --table-collapse: separate;
@@ -108,7 +108,7 @@ th {
     background-color: #02182b;
     color: #eaebed;
     border-bottom: var(--table-border);
-    /* Borda apenas em baixo */
+
 }
 
 td {
